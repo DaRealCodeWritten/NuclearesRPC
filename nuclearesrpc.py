@@ -6,10 +6,8 @@ import pypresence
 import subprocess
 import argparse
 import logging
-import traceback
-import ctypes
 from typing import Dict
-import ctypes
+
 
 
 __version__ = "v2.0.0"
@@ -87,7 +85,6 @@ if len(sys.argv) > 1:
             # Client is launching through steam, we are expected to launch it on Steam's behalf
             game_exec = subprocess.Popen(obj)
 
-ctypes.windll.user32.MessageBoxW(0, "Remember to turn on the WebServer, else NuclearesRPC will not work!", "Reminder!", 64)
 cid = 1331101603649818786
 presence = pypresence.Presence(cid, pipe=0)
 logging.info("Locating running Nucleares executable...")
